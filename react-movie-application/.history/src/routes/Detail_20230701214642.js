@@ -11,27 +11,17 @@ function Detail() {
     const json = await (
       await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
     ).json();
+    console.log(json);
     setMovie(json.data.movie);
-    setLoading(false);
   };
-
+  console.log(movie.title);
   useEffect(() => {
     getMovie();
   }, []);
   return (
     <div>
       <h1>Movie Detail</h1>
-      {loading ? (
-        "Loading"
-      ) : (
-        <Movie
-          id={movie.id}
-          coverImg={movie.medium_cover_image}
-          title={movie.title}
-          summary={movie.description_full}
-          genres={movie.genres}
-        />
-      )}
+      {loading ? "Loading" : <Movie />}
     </div>
   );
 }

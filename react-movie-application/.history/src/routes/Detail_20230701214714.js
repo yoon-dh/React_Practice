@@ -21,17 +21,7 @@ function Detail() {
   return (
     <div>
       <h1>Movie Detail</h1>
-      {loading ? (
-        "Loading"
-      ) : (
-        <Movie
-          id={movie.id}
-          coverImg={movie.medium_cover_image}
-          title={movie.title}
-          summary={movie.description_full}
-          genres={movie.genres}
-        />
-      )}
+      {loading ? "Loading" : <Movie />}
     </div>
   );
 }
