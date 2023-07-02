@@ -10,7 +10,7 @@ useEffect(() => { // 작업... })
 
 컴포넌트가 렌더링될 때 마다 렌더링이 이루어짐 (1,2)
 
-###2. useEffect의 인자로 callback 함수, dependency array를 받는 경우 
+### 2. useEffect의 인자로 callback 함수, dependency array를 받는 경우 
 
 useEffect(() => { // 작업... },[value])
 
